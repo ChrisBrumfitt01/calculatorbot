@@ -1,13 +1,13 @@
 package com.topcoder.calculatorbot;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CalculatorbotApplicationTests {
+public class CalculatorbotApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 }
