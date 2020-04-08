@@ -1,5 +1,6 @@
 package com.topcoder.calculatorbot.api;
 
+import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
@@ -17,6 +18,8 @@ import org.springframework.web.reactive.function.client.WebClient;
 @RestController
 public class AuthController {
 
+  private static final Logger LOG = Logger.getLogger(AuthController.class.getName());
+
   private static final String BASE_URL = "https://slack.com/api/oauth.v2.access";
 
   @Value("${clientId}")
@@ -33,6 +36,7 @@ public class AuthController {
 
   @GetMapping("/auth")
   public ResponseEntity authorise(@RequestParam String code) {
+    LOG.info("Authorising user");
     RestTemplate restTemplate = new RestTemplate();
 
     HttpHeaders headers = new HttpHeaders();

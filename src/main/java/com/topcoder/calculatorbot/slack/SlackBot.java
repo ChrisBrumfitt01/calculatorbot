@@ -42,6 +42,7 @@ public class SlackBot extends Bot {
 
   @Controller(events = EventType.DIRECT_MESSAGE)
   public void onReceiveDM(WebSocketSession session, Event event) {
+    logger.info("Equation received: " + event.getText());
     String text = event.getText();
     String result = calculator.calculate(text).toPlainString();
     reply(session, event, new Message(result));
