@@ -3,6 +3,8 @@ package com.topcoder.calculatorbot.slack;
 import com.topcoder.calculatorbot.exceptions.InvalidSumException;
 import java.math.BigDecimal;
 import java.math.MathContext;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -123,15 +125,15 @@ public class Calculator {
   }
 
   private String doPowers(String sum) {
-    return calculatePartOfSum(sum, List.of('^'));
+    return calculatePartOfSum(sum, newList('^'));
   }
 
   private String doMultiplicationAndDivision(String sum) {
-    return calculatePartOfSum(sum, List.of('*', '/'));
+    return calculatePartOfSum(sum, newList('*', '/'));
   }
 
   private String doAdditionAndSubtraction(String sum) {
-    return calculatePartOfSum(sum, List.of('+', '-'));
+    return calculatePartOfSum(sum, newList('+', '-'));
   }
 
   private void validateNumberInSum(String number) {
@@ -144,5 +146,11 @@ public class Calculator {
     if(countOfDots > 1) {
       throw new InvalidSumException("Invalid number found in sum: " + number);
     }
+  }
+
+  private List<Character> newList(Character... elements) {
+    List<Character> list = new ArrayList<>();
+    list.addAll(Arrays.asList(elements));
+    return list;
   }
 }
