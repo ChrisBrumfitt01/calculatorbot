@@ -51,7 +51,8 @@ public class AuthController {
 
     HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<MultiValueMap<String, String>>(params, headers);
 
-    ResponseEntity<SlackAuthResponse> res = restTemplate.postForEntity(BASE_URL, request, SlackAuthResponse.class);
+//    ResponseEntity<SlackAuthResponse> res = restTemplate.postForEntity(BASE_URL, request, SlackAuthResponse.class);
+    ResponseEntity<Object> res = restTemplate.postForEntity(BASE_URL, request, Object.class);
     return res;
   }
 
