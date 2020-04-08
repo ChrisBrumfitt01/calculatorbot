@@ -3,18 +3,18 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-<!--	<parent>-->
-<!--		<groupId>org.springframework.boot</groupId>-->
-<!--		<artifactId>spring-boot-starter-parent</artifactId>-->
-<!--		<version>2.2.6.RELEASE</version>-->
-<!--		<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
-<!--	</parent>-->
-
 	<parent>
-		<groupId>me.ramswaroop.jbot</groupId>
-		<artifactId>jbot-parent</artifactId>
-		<version>4.1.2-rc.3-SNAPSHOT</version>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.6.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
+<!--	<parent>-->
+<!--		<groupId>me.ramswaroop.jbot</groupId>-->
+<!--		<artifactId>jbot-parent</artifactId>-->
+<!--		<version>4.1.2-rc.3-SNAPSHOT</version>-->
+<!--	</parent>-->
 
 
 	<groupId>com.topcoder</groupId>
@@ -41,7 +41,7 @@
 		<dependency>
 			<groupId>me.ramswaroop.jbot</groupId>
 			<artifactId>jbot</artifactId>
-			<version>4.1.2-rc.3-SNAPSHOT</version>
+			<version>3.0.2</version>
 		</dependency>
 	</dependencies>
 
