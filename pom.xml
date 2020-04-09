@@ -7,15 +7,8 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.2.6.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
-
-<!--	<parent>-->
-<!--		<groupId>me.ramswaroop.jbot</groupId>-->
-<!--		<artifactId>jbot-parent</artifactId>-->
-<!--		<version>4.1.2-rc.3-SNAPSHOT</version>-->
-<!--	</parent>-->
-
 
 	<groupId>com.topcoder</groupId>
 	<artifactId>calculatorbot</artifactId>
@@ -33,7 +26,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -53,12 +45,10 @@
 
 	<build>
 		<plugins>
-
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
@@ -67,24 +57,6 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-
-<!--			<plugin>-->
-<!--				<groupId>com.heroku.sdk</groupId>-->
-<!--				<artifactId>heroku-maven-plugin</artifactId>-->
-<!--				<version>1.1.1</version>-->
-<!--				<configuration>-->
-<!--					<appName>calculator-slack-bot</appName>-->
-<!--					<includeTarget>false</includeTarget>-->
-<!--					<includes>-->
-<!--						<include>${basedir}/${full-artifact-name}</include>-->
-<!--					</includes>-->
-<!--					<jdkVersion>1.8</jdkVersion>-->
-<!--					<processTypes>-->
-<!--						<web>java $JAVA_OPTS -jar ${full-artifact-name}</web>-->
-<!--					</processTypes>-->
-<!--				</configuration>-->
-<!--			</plugin>-->
-
 		</plugins>
 	</build>
 
