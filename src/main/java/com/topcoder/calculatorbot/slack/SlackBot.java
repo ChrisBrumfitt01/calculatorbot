@@ -1,5 +1,6 @@
 package com.topcoder.calculatorbot.slack;
 
+import com.topcoder.calculatorbot.exceptions.InvalidSumException;
 import me.ramswaroop.jbot.core.slack.Bot;
 import me.ramswaroop.jbot.core.slack.Controller;
 import me.ramswaroop.jbot.core.slack.EventType;
@@ -44,8 +45,12 @@ public class SlackBot extends Bot {
   public void onReceiveDM(WebSocketSession session, Event event) {
     logger.info("Equation received: " + event.getText());
     String text = event.getText();
-    String result = calculator.calculate(text).toPlainString();
-    reply(session, event, new Message(result));
+    try {
+      String result = calculator.calculate(text).toPlainString();
+      reply(session, event, new Message(result));
+    } catch (InvalidSumException e) {
+      reply(session, event, new Message(e.getMessage()));
+    }
   }
 
 
