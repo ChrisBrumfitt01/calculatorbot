@@ -48,7 +48,7 @@ mvn clean install
 
 You can run the application with the command: 
 ```
-mvn clean install
+mvn spring-boot:run
 ```
 
 If you have performed all of the steps correctly up til now - you should now be able to interact with the bot
