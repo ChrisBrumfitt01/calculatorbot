@@ -44,7 +44,7 @@ Getting a local build of Chromie is a simple as cloning the repository and runni
 mvn clean install
 ```
 
-## Running
+## Running locally
 
 You can run the application with the command: 
 ```
@@ -53,3 +53,17 @@ mvn clean install
 
 If you have performed all of the steps correctly up til now - you should now be able to interact with the bot
 in your Slack client.
+
+
+
+
+## Using the publicly distributed bot
+
+**Important**: At time of writing, there were issues with the publicly distributed version which may not work.
+The application is deployed onto the free tier of Heroku, and one of the drawbacks of this is that it will go to sleep for 7 hours a day. If it does not work, you may try at another time.
+
+This application has been deployed on to Heroku. You can add it to your workspace using this URL or by clicking the button: 
+
+https://slack.com/oauth/v2/authorize?client_id=1047628658710.1040260326579&scope=app_mentions:read,channels:join,channels:read,chat:write,chat:write.customize,commands,incoming-webhook,users:write,calls:read,channels:history,channels:manage,calls:write,chat:write.public,emoji:read,dnd:read,files:read,files:write,groups:history,groups:write,groups:read,im:read,links:read,links:write,im:write,mpim:read,mpim:history,im:history,mpim:write,reactions:write,pins:read,reactions:read,remote_files:read,reminders:write,remote_files:share,reminders:read,remote_files:write,pins:write,usergroups:write,users:read,users:read.email,users.profile:read,usergroups:read,team:read&user_scope=channels:read,admin
+
+<a href="https://slack.com/oauth/v2/authorize?client_id=1047628658710.1040260326579&scope=app_mentions:read,channels:join,channels:read,chat:write,chat:write.customize,commands,incoming-webhook,users:write,calls:read,channels:history,channels:manage,calls:write,chat:write.public,emoji:read,dnd:read,files:read,files:write,groups:history,groups:write,groups:read,im:read,links:read,links:write,im:write,mpim:read,mpim:history,im:history,mpim:write,reactions:write,pins:read,reactions:read,remote_files:read,reminders:write,remote_files:share,reminders:read,remote_files:write,pins:write,usergroups:write,users:read,users:read.email,users.profile:read,usergroups:read,team:read&user_scope=channels:read,admin"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x"></a>
