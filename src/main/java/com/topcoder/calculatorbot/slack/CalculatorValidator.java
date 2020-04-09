@@ -9,9 +9,9 @@ public class CalculatorValidator {
   private static final String VALID_CHARS = ".0123456789+-*^/()";
 
   public void validate(String sum) {
-    checkLastCharacter(sum);
-    checkBracketValidity(sum);
     checkForInvalidCharacters(sum);
+    checkBracketValidity(sum);
+    checkLastCharacter(sum);
   }
 
   private void checkForInvalidCharacters(String sum) {
